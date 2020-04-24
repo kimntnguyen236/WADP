@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!--
+Nhập thông tin của lớp học mới
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <div class="container">
+            <section style="border: 1px black solid; margin-top: 30px">
+                <div class="register" style="text-align: center">
+                    <h2>Insert Book</h2>
+                    <hr>
+                    <form id="formnhap" class="normal_form" action="insertBook.php">
+                        <div class="row" style="margin-top: 5px;" >
+                            <div class="col-sm-3">Book Name</div>
+                            <div class="col-sm-3"><input type="text" name="txtName" id="txtName" value="Mat Biec" required></div>
+                        </div>
+                        <div class="row" style="margin-top: 5px">
+                            <div class="col-sm-3">Price :</div>
+                            <div class="col-sm-3">
+                                <input type="number" step="0.01" name="txtPrice" id="txtPrice" min="0" max="100" value="30.5" required>
+                            </div>
+                        </div>
+                        <div class="row" style="margin-top: 5px">
+                            <div class="col-sm-3">Author :</div>
+                            <div class="col-sm-3">
+                                <input type="text" name="txtAuthor" id="txtAuthor"  value="Nguyen Nhat Anh" >
+                            </div>
+                        </div>
+                        <div class="row" style="margin-top: 5px">
+                            <div class="col-sm-9"><input type="submit" name="btnOK" value="Create"><input type="reset" name="btnReset" value="Reset"></div>
+
+                        </div>
+                    </form>
+                    <br>
+                    <a href="viewBook.php">List of Books</a> <br><br>
+                </div>
+            </section>
+        </div>
+        <script>
+            document.getElementById("formnhap").onsubmit = function () {
+                var name = document.getElementById("txtName").value;
+                var author = document.getElementById("txtAuthor").value;
+                if (name.trim().length == 0) {
+                    alert("Tên sách không được để trống");
+                    document.getElementById("txtName").focus();
+                    return false;
+                }
+                if (author.trim().length == 0) {
+                    alert("Tên tác giả không được để trống");
+                    document.getElementById("txtAuthor").focus();
+                    return false;
+                }
+            }
+        </script>
+    </body>
+</html>

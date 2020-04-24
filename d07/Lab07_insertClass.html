@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<!--
+Nhập thông tin của lớp học mới
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <style>
+            body{
+                margin: 1em;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h2>Nhập thông tin lớp học</h2>
+            <form action="Lab07_insertClass.php">
+                Ma Lop: <input type="text" name="txtMa" id="txtMa" value="1909-M1" required> <br><br>
+                Thoi gian nhap hoc: <input type="text" name="txtTG" id="txtTG" value="09-2019" required> <br><br>
+                Chuong trinh: <input type="text" name="txtCT" id="txtCT" value="ACCP i20" required> <br><br>
+                Hoc phi: <input type="number" name="nHP" id="nHP" value="1200" min="100" max="2000" required> <br><br>
+                <input type="submit" value="SUBMIT" name="btnOK">
+                <input type="reset" value="RESET">
+            </form>
+        </div>
+    </body>
+</html>

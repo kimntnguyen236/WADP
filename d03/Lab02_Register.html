@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Register</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="container">
+            <h2>Sign up</h2>
+            <hr>
+            <form name="form_DK" action="Lab02_Register.php" method="post">
+                Fullname : <input type="text" name="txtName" value="Thien Kim" required>
+                <br>
+                Email :
+                <input type="email" name="txtMail" value="kim@gmail.com" required> <br>
+                City : 
+                <select name="cbCity" id="cbCity">
+                    <option value="SG">SaiGon</option>
+                    <option value="BH">Bien Hoa</option>
+                    <option value="NT">Nha Trang</option>
+                    <option value="HU">Hue</option>
+                    <option value="HN">Ha Noi</option>
+                </select> <br>
+
+                Gender :
+                Nu <input type="radio" name="rdGender" value="nu" checked>
+                Nam <input type="radio" name="rdGender" value="nam"> <br>
+
+                Birthday:
+                <input type="date" name="txtBD" value="2001-06-23"> <br>
+
+                Hobbies: 
+                Sleeping <input type="checkbox" name="ckHob[1]" value="ngu nuong" checked>
+                Eating <input type="checkbox" name="ckHob[2]" value="an hang" checked>
+                Gaming <input type="checkbox" name="ckHob[3]" value="choi game"> <br>
+                Comments: <br>
+                <textarea name="txtNote" id="txtNote" cols="30" rows="5">Nothing ...</textarea> <br>
+
+                <input type="submit" name="btnOK" value="Submit" onclick="congratulations()"/>
+                <input type="reset" name="btnReset" value="Reset" />
+                <script>
+                    function congratulations() {
+                        alert("Chào mừng bạn đã đăng kí thành công.");
+                    }
+                </script>
+            </form>
+        </div>
+    </body>
+</html>

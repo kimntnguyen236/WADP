@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>login</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <div class="container">
+            <div style="border: 1px black solid; margin: 30px 300px; width: 500px">
+                <div style="text-align: center; margin-bottom: 20px">
+                    <h2>Login</h2>
+                    <hr>
+                    <form name="form_LOGIN" action="login.php" method="post">
+                        <!--get xuất hiện đầy đủ ngay link-->
+                        Username :
+                        <input type="text" name="txtID" required> <br><br>
+                        Password :
+                        <input type="password" name="txtPass" required> <br><br>
+
+                        <input type="submit" name="btnOK" value="Submit" />
+                        <input type="reset" name="btnReset" value="Reset" />
+                    </form>
+                </div>
+            </div>
+        </div>
+        <script>
+            document.getElementById("form_LOGIN").onsubmit = function () {
+                var ID = document.getElementById("txtID").value.trim();
+                var pass = document.getElementById("txtPass").value.trim();
+                if (ID.length == 0) {
+                    alert("ID không được để trống !");
+                    document.getElementById("txtID").focus();
+                    return false;
+                }
+                if (pass.length == 0) {
+                    alert("Password không được để trống !");
+                    document.getElementById("txtPass").focus();
+                    return false;
+                }
+            }
+        </script>
+    </body>
+</html>
